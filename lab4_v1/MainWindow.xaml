@@ -1,0 +1,22 @@
+﻿<Window x:Class="lab4_v1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab4_v1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dgStudenci" Margin="0,124,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Imię" Binding="{Binding imie}" Width="100"/>
+                <DataGridTextColumn Header="Nazwisko" Binding="{Binding nazwisko}" Width="100"/>
+                <DataGridTextColumn Header="Numer indeksu" Binding="{Binding id}" Width="100"/>
+                <DataGridTextColumn Header="Wydział" Binding="{Binding wydzial}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnAdd" Content="Dodaj studenta" HorizontalAlignment="Left" Margin="27,57,0,0" VerticalAlignment="Top" Click="btnAdd_clicked"/>
+        <Button x:Name="btnRmv" Content="Usuń studenta" HorizontalAlignment="Left" Margin="142,57,0,0" VerticalAlignment="Top" Click="btnRmv_clicked"/>
+
+    </Grid>
+</Window>
